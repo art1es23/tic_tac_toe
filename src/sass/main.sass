@@ -1,0 +1,218 @@
+@import "helpers/reset"
+@import "helpers/mixins"
+
+*, *:before, *:after
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  padding: 0
+  margin: 0
+  display: flex
+  color: black
+  min-height: 100vh
+  background-color: rebeccapurple
+
+a
+  text-decoration: none
+
+.slider
+  width: 100%
+  height: 100vh
+  display: flex
+  margin: auto
+  position: relative
+  justify-content: center
+  &--wrapper
+    max-width: 100%
+    width: 100%
+    height: 100%
+    display: flex
+    position: relative
+    overflow: hidden
+    box-shadow: 10px 10px 44px 10px rgba(0,0,0,0.75)
+
+  &__item
+    display: flex
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    animation: hide 1s ease-in-out forwards
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  &-btn
+    &__item
+      display: flex
+      position: absolute
+      top: 0
+      left: 0
+      width: 7.5%
+      height: 100%
+      justify-content: center
+      align-items: center
+      color: black
+      font-size: 1.35rem
+      transition: background-color 0.3s ease-in-out
+      background-color: rgba(255, 255, 255, 0.25)
+      &:hover
+        background-color: rgba(255, 255, 255, 0.5)
+        cursor: pointer
+
+.btn--next
+  left: 100%
+  transform: translateX(-100%)
+
+.slider-dots
+  &--wrapper
+    position: absolute
+    bottom: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 10%
+    width: 100%
+
+  &__item
+    display: flex
+    width: 1.5rem
+    height: 1.5rem
+    margin-left: 1.5rem
+    border: 1px solid cornflowerblue
+    border-radius: 50%
+    transition: all 0.3s ease-in-out
+
+    &:first-child
+      margin-left: 0
+
+    &:hover
+      background-color: cornflowerblue
+      cursor: pointer
+
+.active
+  background-color: cornflowerblue
+
+.activeSlide
+  animation: show 1.575s ease-in-out forwards
+
+@keyframes show
+  0%
+    opacity: 0
+    visibility: hidden
+    transform: translateX(100%)
+  80%
+    transform: translateX(-2.5%)
+  100%
+    opacity: 1
+    visibility: visible
+    transform: translateX(0)
+
+@keyframes hide
+  0%
+    opacity: 1
+    visibility: visible
+    transform: translateX(0)
+  20%
+    transform: translateX(5%)
+  100%
+    opacity: 0
+    visibility: hidden
+    transform: translateX(-100%)
+
+.player
+  width: 15%
+  display: flex
+  align-items: flex-start
+  padding: 10% 0
+  font-size: 2.5rem
+  justify-content: center
+  text-align: center
+  background-color: green
+
+.wrapper
+  width: 100%
+  height: 100vh
+
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: 0 10%
+  background-color: black
+
+  h1
+    font-size: 2rem
+    color: white
+
+.cross
+  &--wrapper
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(3, 1fr)
+    grid-gap: 5%
+    width: 50%
+    height: 50vh
+    margin: 5% 0
+    padding: 2.5%
+
+  &__item
+    display: flex
+    width: 100%
+    border: 1px solid white
+    color: white
+    justify-content: center
+    align-items: center
+    font-size: 2.5rem
+    transition: all 0.3s ease-in-out
+
+    &:hover
+      cursor: pointer
+      background: rgba(255,255,255,0.5)
+
+  &__icon
+    display: flex
+    width: 100%
+    height: 100%
+    background:
+      image: url("../img/close.png")
+      repeat: no-repeat
+      size: cover
+      position: center
+
+    img
+      width: 100%
+      height: 100%
+
+.endGame
+  display: none
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 50vh
+  height: 50vh
+  border: 1px solid white
+  justify-content: center
+  align-items: center
+  background-color: rebeccapurple
+
+.text
+  color: white
+  font-size: 2.5rem
+
+.again
+  display: flex
+  padding: 1rem 2rem
+  background-color: greenyellow
+  border: none
+  border-radius: 30px
+  &:hover
+    cursor: pointer
+
+@import "helpers/fonts"

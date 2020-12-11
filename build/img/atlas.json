@@ -1,0 +1,36 @@
+{"frames": {
+
+"cat.png":
+{
+	"frame": {"x":0,"y":0,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+},
+"mario.png":
+{
+	"frame": {"x":64,"y":0,"w":667,"h":741},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":667,"h":741},
+	"sourceSize": {"w":667,"h":741}
+},
+"mino.png":
+{
+	"frame": {"x":0,"y":741,"w":720,"h":490},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":720,"h":490},
+	"sourceSize": {"w":720,"h":490}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "atlas.png",
+	"format": "RGBA8888",
+	"size": {"w":731,"h":1231},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:1cba8472bf3ce1ba9a0a339fff43b861:5404dc6e2a089fe5b30cbc0ee7c716e8:cbce6b53f0f49e0bf15173c25c41f876$"
+}
+}
